@@ -1,0 +1,117 @@
+.sidebar {
+  position: fixed;
+  left: -250px; /* Start off-screen */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #1F372F;
+  color: #e0e0e0;
+  padding: 30px;
+  transition: left 0.3s ease; /* Slide transition */
+  z-index: 1000; /* Ensure sidebar overlays other content */
+  overflow-y: auto; /* Add scrollbar vertically */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.sidebar.open {
+  left: 0; /* Slide in when open */
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: #e0e0e0;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #453923;
+  color: #ffffff !important;
+}
+
+.nav-link .icon {
+  margin-right: 10px;
+  font-size: 1.2em; /* Increase icon size */
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  z-index: 1100; /* Ensure submenu appears above sidebar */
+  padding-left: 20px; /* Indent submenu items */
+}
+
+.submenu.open {
+  max-height: 200px; /* Adjust height based on your content */
+}
+
+.sidebar-footer {
+  /* background-color: #1c170ed2; */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: auto; /* Push to the bottom */
+}
+
+.sidebar-footer p {
+  margin-bottom: 10px;
+}
+
+.logout-button {
+  width: 100%;
+  background-color: #1c170ed2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: red;
+}
+
+.sidebar-toggler {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1100; /* Ensure button is above sidebar */
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-toggler:hover {
+  border-radius: 50%;
+  background-color: #1F372F;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 900; /* Ensure overlay is behind sidebar */
+}

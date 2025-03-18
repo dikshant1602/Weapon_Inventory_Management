@@ -1,0 +1,33 @@
+/* src/App.css */
+
+.App {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  color: white;
+}
+/* App.css */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .content {
+    padding: 30px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .content {
+    padding: 40px;
+  }
+}

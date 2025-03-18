@@ -1,0 +1,15 @@
+/* Table header */
+.MuiTableHead-root {
+  background-color: #1c170ed2; /* Dark background for headers */
+}
+
+/* Table row */
+.MuiTableRow-root {
+  background-color: #1c170ed2 ; /* Dark background for rows */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Table row hover effect */
+.MuiTableRow-root:hover {
+  background-color: #2b251eb3; /* Darker background on hover */
+}

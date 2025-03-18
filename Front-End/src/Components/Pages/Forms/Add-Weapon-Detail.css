@@ -1,0 +1,40 @@
+:root {
+    --background-color: #1c170ed2;
+    --container-bg-color: #1c170ed2;
+    --text-color: #f4f4f4;
+    --input-bg-color: #3c3c3c;
+    --input-border-color: #555555;
+    --button-bg-color: #1f372f;
+    --button-hover-bg-color: #0056b3;
+    --placeholder-color: #d3d3d3;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+}
+
+input, select {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border-color);
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
